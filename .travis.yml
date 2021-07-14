@@ -16,6 +16,7 @@ android:
     # The SDK version used to compile your project
     - android-30
     - android-18
+    - android-22
 
 
     # Additional components
