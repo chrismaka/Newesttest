@@ -24,9 +24,9 @@ android:
 
     # Specify at least one system image,
     # if you need to run emulator(s) during your tests
-    - sys-img-x86-android-22
+    - sys-img-x86-google_apis-android-22
 before_script:
-      - echo no | android create avd --force -n test -t android-30 --abi sys-img-x86-android-22
+      - echo no | android create avd --force -n test -t android-30 --abi sys-img-x86 --tag google_apis-android-22
       - emulator -avd test -no-skin -no-audio -no-window &
       - android-wait-for-emulator
       - adb shell input keyevent 82 &
