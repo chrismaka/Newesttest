@@ -18,6 +18,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity2"></activity>
+
+        <service android:name=".FirebaseMessageReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
     </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
